@@ -1,0 +1,277 @@
+/* Medium-inspired Typography & Minimalist Layout */
+
+:root {
+  --bg-color: #ffffff;
+  --text-main: #242424;
+  --text-muted: #6b6b6b;
+  --link-color: #1a8917; /* Accent vert style Medium */
+  --link-hover: #156d12;
+  --border-color: #f2f2f2;
+  --font-serif: "Charter", "Georgia", Cambria, serif;
+  --font-sans:
+    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.site-header {
+  padding-top: 80px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.site-meta {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-family: var(--font-sans);
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 20px;
+  font-style: italic;
+}
+
+/* Content Sections */
+.neighborhood {
+  padding: 48px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.neighborhood:last-of-type {
+  border-bottom: none;
+}
+
+h2 {
+  font-family: var(--font-sans);
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+  color: var(--text-main);
+}
+
+/* Recommendation Lists */
+.place-list {
+  list-style: none;
+}
+
+.place-list li {
+  margin-bottom: 20px;
+}
+
+.place-list li:last-child {
+  margin-bottom: 0;
+}
+
+.place-name {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--text-main);
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.2);
+  text-underline-offset: 3px;
+  transition: all 0.2s ease;
+}
+
+.place-name:hover {
+  color: var(--link-color);
+  text-decoration-color: var(--link-color);
+}
+
+.description {
+  margin-top: 4px;
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+.description a {
+  color: var(--text-muted);
+  text-decoration: underline;
+}
+
+.description a:hover {
+  color: var(--link-color);
+}
+
+/* Footer */
+.site-footer {
+  padding: 48px 0 80px 0;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .site-header {
+    padding-top: 40px;
+    padding-bottom: 32px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  .neighborhood {
+    padding: 32px 0;
+  }
+}
+
+/* Layout adjustment for title and badge alignment */
+.place-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Category Badge Styling */
+.category-tag {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background-color: #f2f2f2;
+  color: #6b6b6b;
+  display: inline-block;
+}
+
+/* Color accents per category */
+.category-tag.restaurant {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.category-tag.shopping {
+  background-color: #e0e7ff;
+  color: #3730a3;
+}
+
+.category-tag.architecture {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.category-tag.temple {
+  background-color: #fce7f3;
+  color: #9d174d;
+}
+
+.category-tag.culture {
+  background-color: #f3e8ff;
+  color: #6b21a8;
+}
+
+/* Filter Bar Container */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+/* Base Filter Button */
+.filter-btn {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 1px solid transparent;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 0.65; /* Subtle by default so it's not overwhelming */
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* "All" Button Styling */
+.filter-btn[data-filter="all"] {
+  background-color: #f2f2f2;
+  color: #242424;
+}
+
+/* Matching Tag Colors */
+.filter-btn[data-filter="restaurant"] {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.filter-btn[data-filter="shopping"] {
+  background-color: #e0e7ff;
+  color: #3730a3;
+}
+
+.filter-btn[data-filter="architecture"] {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.filter-btn[data-filter="temple"] {
+  background-color: #fce7f3;
+  color: #9d174d;
+}
+
+.filter-btn[data-filter="culture"] {
+  background-color: #f3e8ff;
+  color: #6b21a8;
+}
+
+/* Active State Outline for Extra Clarity */
+.filter-btn.active {
+  box-shadow: 0 0 0 1.5px currentColor;
+}
