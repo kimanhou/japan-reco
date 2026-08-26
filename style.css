@@ -276,15 +276,101 @@ h2 {
   box-shadow: 0 0 0 1.5px currentColor;
 }
 
+/* Navigation Back Link */
+.back-nav {
+  margin-bottom: 20px;
+}
+
+.back-link {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--text-main);
+}
+
+/* Hero Image Banner */
 .hero-image-wrapper {
   margin-top: 24px;
   border-radius: 8px;
   overflow: hidden;
+  max-height: 260px;
 }
 
 .hero-image {
   width: 100%;
-  height: 240px;
+  height: 260px;
   object-fit: cover;
   display: block;
+}
+
+/* Landing Page Layout */
+.landing-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 80px 24px 40px;
+}
+
+.landing-header {
+  margin-bottom: 40px;
+}
+
+.city-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.city-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text-main);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.city-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+}
+
+.city-image-wrapper {
+  height: 180px;
+  overflow: hidden;
+}
+
+.city-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.city-info {
+  padding: 20px;
+}
+
+.city-info h2 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.city-info p {
+  font-family: var(--font-serif);
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 600px) {
+  .city-selector {
+    grid-template-columns: 1fr;
+  }
 }
