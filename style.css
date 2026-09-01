@@ -200,12 +200,12 @@ h2 {
   color: #065f46;
 }
 
-.category-tag.temple {
+.category-tag.culture {
   background-color: #fce7f3;
   color: #9d174d;
 }
 
-.category-tag.culture {
+.category-tag.workshop {
   background-color: #f3e8ff;
   color: #6b21a8;
 }
@@ -261,12 +261,12 @@ h2 {
   color: #065f46;
 }
 
-.filter-btn[data-filter="temple"] {
+.filter-btn[data-filter="culture"] {
   background-color: #fce7f3;
   color: #9d174d;
 }
 
-.filter-btn[data-filter="culture"] {
+.filter-btn[data-filter="workshop"] {
   background-color: #f3e8ff;
   color: #6b21a8;
 }
